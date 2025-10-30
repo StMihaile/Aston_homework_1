@@ -1,18 +1,19 @@
-/*type IPost = {
-  id: number;
-  title: string;
-  content: string;
+type PostType = {
+  id: number,
+  title: string,
+  content: string,
 };
 
-const PostCard = ({ id, title, content }: IPost) => {
+const PostCard = ({ post }: { post: PostType }) => {
+  const { id, title, content } = post;
   return (
-    <article>
+    <div key={id}>
       <h2>{title}</h2>
       <p>{content}</p>
-    </article>
+    </div>
   );
 };
 
-export { PostCard };*/
+export { PostCard };
 
 
